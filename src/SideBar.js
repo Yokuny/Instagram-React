@@ -1,9 +1,9 @@
 import React from "react";
-import ProfileCard from "./side bar componentes/ProfileCard";
-import Sugestoes from "./side bar componentes/Sugestoes";
-import UsuariosSugeridos from "./side bar componentes/UsuariosSugeridos";
-import InstagramTermos from "./side bar componentes/InstagramTermos";
-import Copywriter from "./side bar componentes/Copywriter";
+import ProfileCard from "./SideBar-Componentes/ProfileCard";
+import Sugestoes from "./SideBar-Componentes/Sugestoes";
+import UsuariosSugeridos from "./SideBar-Componentes/UsuariosSugeridos";
+import InstagramTermos from "./SideBar-Componentes/InstagramTermos";
+import Copywriter from "./SideBar-Componentes/Copywriter";
 const SideBar = () => (
   <div className="sideBar">
     <ProfileCard />

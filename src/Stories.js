@@ -1,4 +1,15 @@
 import React from "react";
+import FriendStories from "./Stories-Componentes/FriendStories";
+
+let FriendsNameList = [];
+FriendsNameList.push("jade_picon");
+FriendsNameList.push("thai.d.mel");
+FriendsNameList.push("ingrid_gui");
+FriendsNameList.push("gio.an");
+FriendsNameList.push("alexandre_he");
+FriendsNameList.push("mari.peso");
+FriendsNameList.push("ju luziê");
+FriendsNameList.push("lu_ferreira");
 
 const Stories = () => (
   <nav className="stories">
@@ -6,62 +17,11 @@ const Stories = () => (
       <ion-icon name="chevron-forward-circle"></ion-icon>
     </div>
     <div id="storiesSize">
-      <div>
-        <div>
-          <img src="./src/stories_background.jpg" />
-          <img id="storyImg1" />
-          <p>jade_picon</p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <img src="./src/stories_background.jpg" />
-          <img id="storyImg2" />
-        </div>
-        <p>thai.d.mel</p>
-      </div>
-      <div>
-        <div>
-          <img src="./src/stories_background.jpg" />
-          <img id="storyImg3" />
-        </div>
-        <p>ingrid_gui</p>
-      </div>
-      <div>
-        <div>
-          <img src="./src/stories_background.jpg" />
-          <img id="storyImg4" />
-        </div>
-        <p>gio.an</p>
-      </div>
-      <div>
-        <div>
-          <img src="./src/stories_background.jpg" />
-          <img id="storyImg5" />
-        </div>
-        <p>alexandre_he</p>
-      </div>
-      <div>
-        <div>
-          <img src="./src/stories_background.jpg" />
-          <img id="storyImg6" />
-        </div>
-        <p>mari.peso</p>
-      </div>
-      <div>
-        <div>
-          <img src="./src/stories_background.jpg" />
-          <img id="storyImg7" />
-        </div>
-        <p>ju luziê</p>
-      </div>
-      <div>
-        <div>
-          <img src="./src/stories_background.jpg" />
-          <img id="storyImg8" />
-        </div>
-        <p>lu_ferreira</p>
-      </div>
+      {/* é necessario usar .map aqui porque preciso de retorno */}
+      {/* props recebe como um nó oque passamos como valor de um atributo */}
+      {FriendsNameList.map((element, index) => (
+        <FriendStories name={element} id={index + 1} />
+      ))}
     </div>
   </nav>
 );

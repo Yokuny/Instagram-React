@@ -8,20 +8,17 @@ import MobileFooter from "./MobileFooter";
 const root = createRoot(document.getElementById("root"));
 
 const ElementBody = () => (
-  <div>
+  <>
     <HeaderBar />
     <main className="mainContentGrid">
-      {/* side bar */}
       <SideBar />
       <main className="mainContent">
-        {/* story */}
         <Stories />
-        {/* feed */}
         <Feed />
         <MobileFooter />
       </main>
     </main>
-  </div>
+  </>
 );
 
 root.render(<ElementBody />);

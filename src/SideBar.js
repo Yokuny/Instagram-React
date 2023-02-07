@@ -8,9 +8,7 @@ const SideBar = () => (
   <div className="sideBar">
     <ProfileCard />
     <Sugestoes />
-    {/*  */}
     <UsuariosSugeridos />
-    {/*  */}
     <InstagramTermos />
     <Copywriter />
   </div>

@@ -20,7 +20,7 @@ const Stories = () => (
       {/* é necessario usar .map aqui porque preciso de retorno */}
       {/* props recebe como um nó oque passamos como valor de um atributo */}
       {FriendsNameList.map((element, index) => (
-        <FriendStories name={element} id={index + 1} />
+        <FriendStories key={`FriendStorie${index}`} name={element} id={index + 1} />
       ))}
     </div>
   </nav>

@@ -1,19 +1,19 @@
 import React from "react";
 
 const HeaderBar = () => (
-  <header class="headerBar">
-    <div class="headerBarSize">
-      <div class="homeIcons">
+  <header className="headerBar">
+    <div className="headerBarSize">
+      <div className="homeIcons">
         <ion-icon name="logo-instagram"></ion-icon>
         <div>
           <hr />
         </div>
-        <img src="./assets/logo.png" alt="" srcset="" />
+        <img src="./assets/logo.png" alt="Instagram logo" />
       </div>
-      <div class="instagramInput">
-        <input type="text" name="" id="" placeholder="Pesquisar" />
+      <div className="instagramInput">
+        <input type="text" placeholder="Pesquisar" />
       </div>
-      <div class="rightIcons">
+      <div className="rightIcons">
         <ion-icon name="paper-plane-outline"></ion-icon>
         <ion-icon name="compass-outline"></ion-icon>
         <ion-icon name="heart-outline"></ion-icon>

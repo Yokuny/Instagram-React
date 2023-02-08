@@ -4,13 +4,15 @@ import PostCardLikes from "./PostCardLikes";
 import PostDescription from "./PostDescription";
 import CommentField from "./CommentField";
 import CommentInput from "./CommentInput";
-const PostCardFooter = () => (
+const PostCardFooter = (props) => (
   <div className="postCardFooter">
     <PostCardButtons />
-    <PostCardLikes />
+    <PostCardLikes by={props.likeBy} and={props.andLikedBy} />
     <section className="comments">
-      <PostDescription />
-      <CommentField />
+      <PostDescription user={props.yourName} title={props.yourTitle} />
+      {props.comments.map((comment, index) => (
+        <CommentField key={`comment${index}`} name={comment.nickName} comment={comment.text} />
+      ))}
       <CommentInput />
     </section>
   </div>

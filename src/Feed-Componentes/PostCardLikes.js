@@ -1,11 +1,11 @@
 import React from "react";
-const PostCardLikes = () => (
+const PostCardLikes = (props) => (
   <div className="postCardLikes">
     <img id="likeImgUser1" />
     <p>
-      Curtido por<h4>_raskolnikov</h4>
+      Curtido por<h4>{props.by}</h4>
       <b>e</b>
-      <h4> outras 16 pessoas</h4>
+      <h4> {props.and}</h4>
     </p>
   </div>
 );

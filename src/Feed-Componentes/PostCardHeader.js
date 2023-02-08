@@ -1,9 +1,9 @@
 import React from "react";
-const PostCardHeader = () => (
+const PostCardHeader = (props) => (
   <div className="postCardHeader">
     <div className="postOwnerName">
-      <img alt="" id="userPostImg1" />
-      <h4>runner</h4>
+      <img alt="" id={`userPostImg${props.id}`} />
+      <h4>{props.nickName}</h4>
     </div>
     <ion-icon name="ellipsis-horizontal"></ion-icon>
   </div>

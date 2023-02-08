@@ -1,4 +1,4 @@
-import FeedPostContent from "./Feed-Componentes/FeedPostContent";
+import Post from "./Post";
 let post = [];
 
 const addComment = (post, nickName, text) => {
@@ -44,5 +44,5 @@ addComment(post[2], "ghost.pz", "Such a fun project.");
 addComment(post[2], "yokuny", "🔥🔥🔥");
 addComment(post[2], "brianlocs", "WOW🔥👏");
 
-const Feed = () => <FeedPostContent data={post} />;
+const Feed = () => <Post data={post} />;
 export default Feed;

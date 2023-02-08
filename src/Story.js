@@ -1,5 +1,5 @@
 import React from "react";
-const FriendStories = (props) => (
+const Story = (props) => (
   <div>
     <div>
       <img src="./assets/stories_background.jpg" />
@@ -8,4 +8,4 @@ const FriendStories = (props) => (
     </div>
   </div>
 );
-export default FriendStories;
+export default Story;

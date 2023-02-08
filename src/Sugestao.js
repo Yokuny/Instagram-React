@@ -1,6 +1,5 @@
 import React from "react";
-
-const CreateUserSuggestion = (props) => (
+const Sugestao = (props) => (
   <div className="usuarioSugeridoCard">
     <div className="sugestãoCardContent">
       <div>
@@ -14,4 +13,4 @@ const CreateUserSuggestion = (props) => (
     <h4>Seguir</h4>
   </div>
 );
-export default CreateUserSuggestion;
+export default Sugestao;

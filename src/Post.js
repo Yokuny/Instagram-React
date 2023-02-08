@@ -1,7 +1,7 @@
 import React from "react";
-import PostCardHeader from "./PostCardHeader";
-import PostContent from "./PostContent";
-import PostCardFooter from "./PostCardFooter";
+import PostCardHeader from "./Feed-Componentes/PostCardHeader";
+import PostContent from "./Feed-Componentes/PostContent";
+import PostCardFooter from "./Feed-Componentes/PostCardFooter";
 const FeedPostContent = (props) => (
   <main>
     {props.data.map((elementData, index) => (

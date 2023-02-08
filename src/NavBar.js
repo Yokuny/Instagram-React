@@ -3,7 +3,7 @@ import HomeIcons from "./HeaderBar-Componentes/HomeIcons";
 import InstagramSearchBar from "./HeaderBar-Componentes/InstagramSearchBar";
 import RightIcons from "./HeaderBar-Componentes/RightIcons";
 
-const HeaderBar = () => (
+const NavBar = () => (
   <header className="headerBar">
     <div className="headerBarSize">
       <HomeIcons />
@@ -12,4 +12,4 @@ const HeaderBar = () => (
     </div>
   </header>
 );
-export default HeaderBar;
+export default NavBar;

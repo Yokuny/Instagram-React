@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProfileCard = () => (
+const Usuario = () => (
   <div className="profileCard">
     <img id="myUserPicture" />
     <div>
@@ -9,4 +9,4 @@ const ProfileCard = () => (
     </div>
   </div>
 );
-export default ProfileCard;
+export default Usuario;

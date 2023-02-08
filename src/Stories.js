@@ -1,5 +1,5 @@
 import React from "react";
-import FriendStories from "./Stories-Componentes/FriendStories";
+import Story from "./Story";
 
 let FriendsNameList = [];
 FriendsNameList.push("jade_picon");
@@ -18,7 +18,7 @@ const Stories = () => (
     </div>
     <div id="storiesSize">
       {FriendsNameList.map((element, index) => (
-        <FriendStories key={`FriendStorie${index}`} name={element} id={index + 1} />
+        <Story key={`FriendStorie${index}`} name={element} id={index + 1} />
       ))}
     </div>
   </nav>

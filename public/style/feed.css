@@ -51,6 +51,7 @@
   width: 16px;
 } /*post*/
 .postContent {
+  cursor: pointer;
   width: min(612px, 100vw);
   height: min(612px, 100vw);
 }
@@ -113,6 +114,7 @@
   line-height: 16.41px;
 }
 .postCardLikes h4 {
+  display: flex;
   font-weight: 700;
 }
 .postCardLikes h4::before {

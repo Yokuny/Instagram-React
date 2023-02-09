@@ -45,7 +45,11 @@ const PostCardButtons = (props) => {
         <span>
           Curtido por<h4>{props.by}</h4>
           <p>e</p>
-          <h4>outras {likeCount} pessoas</h4>
+          <h4>
+            outras
+            <h4 data-test="likes-number"> {likeCount} </h4>
+            pessoas
+          </h4>
         </span>
       </div>
     </>

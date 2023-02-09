@@ -1,7 +1,7 @@
 import React from "react";
-import HomeIcons from "./HeaderBar-Componentes/HomeIcons";
-import InstagramSearchBar from "./HeaderBar-Componentes/InstagramSearchBar";
-import RightIcons from "./HeaderBar-Componentes/RightIcons";
+import HomeIcons from "./Navbar-Components/HomeIcons";
+import InstagramSearchBar from "./Navbar-Components/InstagramSearchBar";
+import RightIcons from "./Navbar-Components/RightIcons";
 
 const NavBar = () => (
   <header className="headerBar">

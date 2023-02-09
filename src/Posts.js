@@ -13,7 +13,7 @@ post.push(
     "./assets/garage.jpg",
     "Every person remembers some moment in their life where they witnessed some injustice, big or small, and looked away because the consequences of intervening seemed too intimidating. But there’s a limit to the amount of incivility and inequality and inhumanity that each individual can tolerate.",
     "_raskolnikov",
-    "outras 16 pessoas"
+    16
   )
 );
 addComment(post[0], "bypast", "Looks amazing man! Congrats");
@@ -24,7 +24,7 @@ post.push(
     "https://cdn-animation.artstation.com/p/video_sources/000/085/015/ship-360-02.mp4",
     "Humanity is mind-controlled and only slightly more conscious than your average zombie.",
     "yokuny",
-    "outras 702 pessoas",
+    702,
     false
   )
 );
@@ -37,7 +37,7 @@ post.push(
     "./assets/canal.jpg",
     "To live in the world without becoming aware of the meaning of the world is like wandering about in a great library without touching the books.",
     "fake.avatar",
-    "outras 1M pessoas"
+    999
   )
 );
 addComment(post[2], "ghost.pz", "Such a fun project.");

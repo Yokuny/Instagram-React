@@ -1,13 +1,11 @@
 import React from "react";
-import PostCardButtons from "./PostCardButtons";
-import PostCardLikes from "./PostCardLikes";
+import SocialBtnAndLike from "./SocialBtnAndLike";
 import PostDescription from "./PostDescription";
 import CommentField from "./CommentField";
 import CommentInput from "./CommentInput";
 const PostCardFooter = (props) => (
   <div className="postCardFooter">
-    <PostCardButtons />
-    <PostCardLikes by={props.likeBy} and={props.andLikedBy} />
+    <SocialBtnAndLike by={props.likeBy} and={props.andLikedBy} />
     <section className="comments">
       <PostDescription user={props.yourName} title={props.yourTitle} />
       {props.comments.map((comment, index) => (

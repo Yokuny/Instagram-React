@@ -1,11 +1,11 @@
 import React from "react";
-import PostCardHeader from "./Feed-Componentes/PostCardHeader";
-import PostContent from "./Feed-Componentes/PostContent";
-import PostCardFooter from "./Feed-Componentes/PostCardFooter";
-const FeedPostContent = (props) => (
+import PostCardHeader from "./Post-Components/PostCardHeader";
+import PostContent from "./Post-Components/PostContent";
+import PostCardFooter from "./Post-Components/PostCardFooter";
+const Post = (props) => (
   <main>
     {props.data.map((elementData, index) => (
-      <section key={`postNumber${index}`} className="feed">
+      <section data-test="post" key={`postNumber${index}`} className="feed">
         <div className="postCard">
           <PostCardHeader nickName={elementData.personNickName} id={index + 1} />
           <PostContent type={elementData.img} src={elementData.contentLink} />
@@ -21,4 +21,4 @@ const FeedPostContent = (props) => (
     ))}
   </main>
 );
-export default FeedPostContent;
+export default Post;

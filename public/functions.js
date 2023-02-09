@@ -1,10 +1,3 @@
-function coracao(id) {
-  const coracaoCheio = document.createElement("img");
-  coracaoCheio.src = "./assets/heart-svgrepo-com.svg";
-  const coracaoVazio = document.getElementById(id);
-  coracaoVazio.innerHTML = "";
-  coracaoVazio.append(coracaoCheio);
-}
 function salvar(id) {
   const bookmarkFeito = document.createElement("img");
   bookmarkFeito.src = "./assets/bookmark-svgrepo-com.svg";

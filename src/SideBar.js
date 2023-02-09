@@ -1,9 +1,9 @@
 import React from "react";
 import Usuario from "./Usuario";
-import SuggestionsHead from "./SideBar-Componentes/SuggestionsHead";
+import SuggestionsHead from "./SideBar-Components/SuggestionsHead";
 import Sugestoes from "./Sugestoes";
-import InstagramTermos from "./SideBar-Componentes/InstagramTermos";
-import Copywriter from "./SideBar-Componentes/Copywriter";
+import InstagramTermos from "./SideBar-Components/InstagramTermos";
+import Copywriter from "./SideBar-Components/Copywriter";
 const SideBar = () => (
   <div className="sideBar">
     <Usuario />

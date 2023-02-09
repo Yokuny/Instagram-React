@@ -28,7 +28,7 @@ const Usuario = () => {
         <h4>@user_driven</h4>
         <div>
           <p data-test="name">{name}</p>
-          <ion-icon name="create-outline" onClick={userName}></ion-icon>
+          <ion-icon data-test="edit-name" name="create-outline" onClick={userName}></ion-icon>
         </div>
       </div>
     </div>

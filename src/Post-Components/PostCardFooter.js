@@ -5,20 +5,27 @@ import CommentField from "./CommentField";
 import CommentInput from "./CommentInput";
 const PostCardFooter = ({ type, src, yourName, yourTitle, comments, likedAmount, likeBy }) => {
   const [like, postLike] = useState(false);
-  const [likeCount, newCountValue] = useState(parseInt(likedAmount));
+  const [likeCount, newCountValue] = useState(0);
   const [click, setClick] = useState(1);
+  const [heart, setHeart] = useState(false);
+
   function newLike() {
     postLike(!like);
     if (like) {
-      newCountValue(likeCount - 1);
+      newCountValue(0);
     } else {
-      newCountValue(likeCount + 1);
+      newCountValue(1);
     }
   }
   const handleClick = () => {
     setClick(click + 1);
     if (click >= 2) {
       postLike(true);
+      newCountValue(1);
+      setHeart(true);
+      setTimeout(setHeart, 300, false);
+      //erro aqui e na class. ta faltando pensar em forma de deixar a img estatica e o coração vindo em cima
+      //feed css e likeAnimation css
     }
     setTimeout(setClick, 400, 1);
   };
@@ -26,13 +33,32 @@ const PostCardFooter = ({ type, src, yourName, yourTitle, comments, likedAmount,
     <>
       <div className="postContent">
         {type ? (
-          <img onClick={handleClick} data-test="post-image" src={src} alt={src} />
+          <img
+            onClick={handleClick}
+            className={heart ? "heart" : "noHeart"}
+            data-test="post-image"
+            src={src}
+            alt={src}
+          />
         ) : (
-          <video onClick={handleClick} data-test="post-image" loop muted autoPlay src={src}></video>
+          <video
+            onClick={handleClick}
+            className={heart ? "heart" : "noHeart"}
+            data-test="post-image"
+            loop
+            muted
+            autoPlay
+            src={src}
+          ></video>
         )}
       </div>
       <div className="postCardFooter">
-        <SocialBtnAndLike newLike={newLike} likeCount={likeCount} like={like} by={likeBy} />
+        <SocialBtnAndLike
+          newLike={newLike}
+          likeCount={parseInt(likedAmount) + likeCount}
+          like={like}
+          by={likeBy}
+        />
         <section className="comments">
           <PostDescription user={yourName} title={yourTitle} />
           {comments.map((comment, index) => (

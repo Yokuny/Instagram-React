@@ -6,7 +6,7 @@ import CommentInput from "./CommentInput";
 const PostCardFooter = ({ type, src, yourName, yourTitle, comments, likedAmount, likeBy }) => {
   const [like, postLike] = useState(false);
   const [likeCount, newCountValue] = useState(parseInt(likedAmount));
-  const [click, setClick] = useState(0);
+  const [click, setClick] = useState(1);
   function newLike() {
     postLike(!like);
     if (like) {
@@ -17,11 +17,10 @@ const PostCardFooter = ({ type, src, yourName, yourTitle, comments, likedAmount,
   }
   const handleClick = () => {
     setClick(click + 1);
-    console.log(click);
     if (click >= 2) {
       newLike();
     }
-    setTimeout(setClick, 400, 0);
+    setTimeout(setClick, 400, 1);
   };
   return (
     <>

@@ -13,7 +13,7 @@ const PostCardButtons = ({ like, newLike, by, likeCount }) => {
       <div className="postCardButtons">
         <div>
           <div>
-            <img src={like ? curtida : likeIcon} alt="heart" data-test="like-post" onClick={newLike} />
+            <img src={like ? curtida : likeIcon} alt="heart" onClick={newLike} data-test="like-post" />
           </div>
           <div>
             <ion-icon name="chatbubble-outline"></ion-icon>
@@ -23,7 +23,7 @@ const PostCardButtons = ({ like, newLike, by, likeCount }) => {
           </div>
         </div>
         <div className="bookMark">
-          <img src={saved} alt="salvar" data-test="save-post" onClick={saveIt} />
+          <img src={saved} alt="salvar" onClick={saveIt} data-test="save-post" />
         </div>
       </div>
 

@@ -4,7 +4,7 @@ const PostMidia = ({ handleClick, type, src, heart }) => (
   <div className="postContent">
     {type ? (
       <>
-        <img onClick={handleClick} data-test="post-image" src={src} alt={src} />
+        <img onClick={handleClick} src={src} alt={src} data-test="post-image" />
         <img className={heart ? "displayLike" : "removeHearth"} src={"./assets/like-icon.svg"} alt={src} />
       </>
     ) : (
@@ -12,7 +12,6 @@ const PostMidia = ({ handleClick, type, src, heart }) => (
         <video
           onClick={handleClick}
           className={heart ? "heart" : "noHeart"}
-          data-test="post-image"
           loop
           muted
           autoPlay

@@ -1,9 +1,9 @@
 import React from "react";
 
-const PostDescription = (props) => (
+const PostDescription = ({ user, title }) => (
   <div className="postDescription">
-    <h4>{props.user}</h4>
-    <p>{props.title}</p>
+    <h4>{user}</h4>
+    <p>{title}</p>
   </div>
 );
 export default PostDescription;

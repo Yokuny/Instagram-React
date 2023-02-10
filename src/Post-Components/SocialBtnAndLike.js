@@ -1,26 +1,13 @@
 import React, { useState } from "react";
-const PostCardButtons = (props) => {
-  const [like, postLike] = useState(false);
+const PostCardButtons = ({ like, newLike, by, likeCount }) => {
   const [saved, save] = useState("./assets/bookmark-outline.svg");
-  const [likeCount, newCountValue] = useState(parseInt(props.and));
-
   const curtida = "./assets/heart-svgrepo-com.svg";
   const likeIcon = "./assets/heart-outline.svg";
-
-  function newLike() {
-    postLike(!like);
-    if (like) {
-      newCountValue(likeCount - 1);
-    } else {
-      newCountValue(likeCount + 1);
-    }
-  }
   const saveIt = () => {
-    if (saved == "./assets/bookmark-outline.svg") {
+    if (saved === "./assets/bookmark-outline.svg") {
       save("./assets/bookmark.svg");
     } else save("./assets/bookmark-outline.svg");
   };
-
   return (
     <>
       <div className="postCardButtons">
@@ -41,13 +28,13 @@ const PostCardButtons = (props) => {
       </div>
 
       <div className="postCardLikes">
-        <img id="likeImgUser1" />
+        <img id="likeImgUser1" alt="" />
         <span>
-          Curtido por<h4>{props.by}</h4>
+          Curtido por<h4>{by}</h4>
           <p>e</p>
           <h4>
             outras
-            <h4 data-test="likes-number"> {likeCount} </h4>
+            <h4 data-test="likes-number">{likeCount}</h4>
             pessoas
           </h4>
         </span>

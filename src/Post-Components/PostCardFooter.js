@@ -1,18 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import SocialBtnAndLike from "./SocialBtnAndLike";
 import PostDescription from "./PostDescription";
 import CommentField from "./CommentField";
 import CommentInput from "./CommentInput";
-const PostCardFooter = (props) => (
-  <div className="postCardFooter">
-    <SocialBtnAndLike by={props.likeBy} and={props.andLikedBy} />
-    <section className="comments">
-      <PostDescription user={props.yourName} title={props.yourTitle} />
-      {props.comments.map((comment, index) => (
-        <CommentField key={`comment${index}`} name={comment.nickName} comment={comment.text} />
-      ))}
-      <CommentInput />
-    </section>
-  </div>
-);
+const PostCardFooter = ({ type, src, yourName, yourTitle, comments, likedAmount, likeBy }) => {
+  const [like, postLike] = useState(false);
+  const [likeCount, newCountValue] = useState(parseInt(likedAmount));
+  const [click, setClick] = useState(0);
+  function newLike() {
+    postLike(!like);
+    if (like) {
+      newCountValue(likeCount - 1);
+    } else {
+      newCountValue(likeCount + 1);
+    }
+  }
+  const handleClick = () => {
+    setClick(click + 1);
+    console.log(click);
+    if (click >= 2) {
+      newLike();
+    }
+    setTimeout(setClick, 400, 0);
+  };
+  return (
+    <>
+      <div className="postContent">
+        {type ? (
+          <img onClick={handleClick} data-test="post-image" src={src} alt={src} />
+        ) : (
+          <video onClick={handleClick} data-test="post-image" loop muted autoPlay src={src}></video>
+        )}
+      </div>
+      <div className="postCardFooter">
+        <SocialBtnAndLike newLike={newLike} likeCount={likeCount} like={like} by={likeBy} />
+        <section className="comments">
+          <PostDescription user={yourName} title={yourTitle} />
+          {comments.map((comment, index) => (
+            <CommentField key={`comment${index}`} name={comment.nickName} comment={comment.text} />
+          ))}
+          <CommentInput />
+        </section>
+      </div>
+    </>
+  );
+};
 export default PostCardFooter;

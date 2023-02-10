@@ -18,7 +18,7 @@ const PostCardFooter = ({ type, src, yourName, yourTitle, comments, likedAmount,
   const handleClick = () => {
     setClick(click + 1);
     if (click >= 2) {
-      newLike();
+      postLike(true);
     }
     setTimeout(setClick, 400, 1);
   };

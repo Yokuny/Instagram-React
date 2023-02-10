@@ -23,7 +23,7 @@ const PostCardButtons = ({ like, newLike, by, likeCount }) => {
           </div>
         </div>
         <div className="bookMark">
-          <img src={saved} alt="salvar" onClick={saveIt} data-test="save-post" />
+          <img data-test="save-post" src={saved} alt="salvar" onClick={saveIt} />
         </div>
       </div>
 

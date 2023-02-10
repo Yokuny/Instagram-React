@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PostMidia from "./PostMidia";
 import SocialBtnAndLike from "./SocialBtnAndLike";
 import PostDescription from "./PostDescription";
 import CommentField from "./CommentField";
@@ -23,35 +24,13 @@ const PostCardFooter = ({ type, src, yourName, yourTitle, comments, likedAmount,
       postLike(true);
       newCountValue(1);
       setHeart(true);
-      setTimeout(setHeart, 300, false);
-      //erro aqui e na class. ta faltando pensar em forma de deixar a img estatica e o coração vindo em cima
-      //feed css e likeAnimation css
+      setTimeout(setHeart, 500, false);
     }
     setTimeout(setClick, 400, 1);
   };
   return (
     <>
-      <div className="postContent">
-        {type ? (
-          <img
-            onClick={handleClick}
-            className={heart ? "heart" : "noHeart"}
-            data-test="post-image"
-            src={src}
-            alt={src}
-          />
-        ) : (
-          <video
-            onClick={handleClick}
-            className={heart ? "heart" : "noHeart"}
-            data-test="post-image"
-            loop
-            muted
-            autoPlay
-            src={src}
-          ></video>
-        )}
-      </div>
+      <PostMidia handleClick={handleClick} src={src} heart={heart} type={type} />
       <div className="postCardFooter">
         <SocialBtnAndLike
           newLike={newLike}

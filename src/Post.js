@@ -5,8 +5,8 @@ const Post = (props) => {
   return (
     <main>
       {props.data.map((elementData, index) => (
-        <section data-test="post" key={`postNumber${index}`} className="feed">
-          <div className="postCard">
+        <section key={`postNumber${index}`} className="feed">
+          <div data-test="post" className="postCard">
             <PostCardHeader nickName={elementData.personNickName} id={index + 1} />
             <PostCardFooter
               type={elementData.img}

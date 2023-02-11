@@ -12,8 +12,8 @@ const PostCardButtons = ({ like, newLike, by, likeCount }) => {
     <>
       <div className="postCardButtons">
         <div>
-          <div>
-            <img src={like ? curtida : likeIcon} alt="heart" onClick={newLike} data-test="like-post" />
+          <div data-test="like-post">
+            <img src={like ? curtida : likeIcon} alt="heart" onClick={newLike} />
           </div>
           <div>
             <ion-icon name="chatbubble-outline"></ion-icon>

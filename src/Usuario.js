@@ -25,7 +25,7 @@ const Usuario = () => {
     <div className="profileCard">
       <img onClick={userImg} data-test="profile-image" src={img} />
       <div>
-        <h4>@user_driven</h4>
+        <h4>@Felipe_dev</h4>
         <div>
           <p data-test="name">{name}</p>
           <ion-icon data-test="edit-name" name="create-outline" onClick={userName}></ion-icon>
